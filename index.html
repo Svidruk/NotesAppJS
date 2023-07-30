@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notes</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="panel">
+      <div class="panel-item">Name</div>
+      <div class="panel-item">Category</div>
+      <div class="panel-item">Created</div>
+      <div class="panel-item">Content</div>
+      <div class="panel-item">Date</div>
+    </div>
+    <ul id="notesList"></ul>
+    <input type="text" id="noteInput" placeholder="Type here" />
+    <input type="date" id="dateInput" placeholder="Date" />
+    <select id="categoryInput">
+      <option value="Task">Task</option>
+      <option value="Idea">Idea</option>
+      <option value="Random Thought">Random Thought</option>
+    </select>
+    <button id="addButton">Add note</button>
+    <ul id="notesList"></ul>
+    <script src="js/app.js"></script>
+  </body>
+</html>
