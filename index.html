@@ -7,21 +7,24 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <div class="modal">
+    <div class="modal" id="noteModal">
       <form class="form-container" id="addNoteForm">
-        <input type="text" id="noteContent" placeholder="Type here" required />
+        <input type="hidden" id="noteId" />
+        <span class="close" id="closeButton">&times;</span>
+        <input type="text" id="noteContent" maxlength="90" placeholder="Type here" required />
         <select id="noteCategory" required>
           <option value="Task">Task</option>
           <option value="Thought">Thought</option>
           <option value="Idea">Idea</option>
         </select>
-        <button type="submit">Add Note</button>
+        <button class="addNoteButton" type="submit">Add Note</button>
       </form>
     </div>
     <table>
       <thead>
         <tr>
           <th>Category</th>
+          <th></th>
           <th>Content</th>
           <th>Dates</th>
           <th>Created At</th>
@@ -31,13 +34,14 @@
       <tbody id="notesTableBody"></tbody>
     </table>
     <div class="button-container">
-      <button id="showArchivedButton">Show archived</button>
-      <button id="createNoteButton">Create note</button>
+      <button class="showArchivedButton">Show archived</button>
+      <button class="createNoteButton">Create note</button>
     </div>
     <table id="archivedNotesDropdown">
       <thead>
         <tr>
-          <th>Category</th>
+          <th>Category</th>  
+          <th></th>
           <th>Content</th>
           <th>Dates</th>
           <th>Created At</th>
@@ -46,7 +50,7 @@
       </thead>
       <tbody id="archivedNotesTableBody"></tbody>
     </table>
-    <table>
+    <table class="archive">
       <thead>
         <tr>
           <th>Category</th>

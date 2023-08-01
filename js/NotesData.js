@@ -18,7 +18,7 @@ export const notesData = [
   },
   {
     content:
-      "I'm going to have a dentist appointment on 30-07-2023, I moved it from 31-07-2023.",
+      "I'm going to have a dentist appointment on 30-05-2023, I moved it from 31-07-2023.",
     category: Categories.Task,
     createdAt: "30.07.2023",
   },
