@@ -7,23 +7,55 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <div class="panel">
-      <div class="panel-item">Name</div>
-      <div class="panel-item">Category</div>
-      <div class="panel-item">Created</div>
-      <div class="panel-item">Content</div>
-      <div class="panel-item">Date</div>
+    <div class="modal">
+      <form class="form-container" id="addNoteForm">
+        <input type="text" id="noteContent" placeholder="Type here" required />
+        <select id="noteCategory" required>
+          <option value="Task">Task</option>
+          <option value="Thought">Thought</option>
+          <option value="Idea">Idea</option>
+        </select>
+        <button type="submit">Add Note</button>
+      </form>
     </div>
-    <ul id="notesList"></ul>
-    <input type="text" id="noteInput" placeholder="Type here" />
-    <input type="date" id="dateInput" placeholder="Date" />
-    <select id="categoryInput">
-      <option value="Task">Task</option>
-      <option value="Idea">Idea</option>
-      <option value="Random Thought">Random Thought</option>
-    </select>
-    <button id="addButton">Add note</button>
-    <ul id="notesList"></ul>
-    <script src="js/app.js"></script>
+    <table>
+      <thead>
+        <tr>
+          <th>Category</th>
+          <th>Content</th>
+          <th>Dates</th>
+          <th>Created At</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="notesTableBody"></tbody>
+    </table>
+    <div class="button-container">
+      <button id="showArchivedButton">Show archived</button>
+      <button id="createNoteButton">Create note</button>
+    </div>
+    <table id="archivedNotesDropdown">
+      <thead>
+        <tr>
+          <th>Category</th>
+          <th>Content</th>
+          <th>Dates</th>
+          <th>Created At</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="archivedNotesTableBody"></tbody>
+    </table>
+    <table>
+      <thead>
+        <tr>
+          <th>Category</th>
+          <th>Active Notes</th>
+          <th>Archived Notes</th>
+        </tr>
+      </thead>
+      <tbody id="summaryTableBody"></tbody>
+    </table>
+    <script type="module" src="js/App.js"></script>
   </body>
 </html>

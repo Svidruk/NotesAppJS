@@ -1,45 +1,40 @@
-import { categories } from "./categories";
+import { Categories } from "./constants.js";
 
 export const notesData = [
   {
-    name:
-    text: "Buy milk",
-    date: "2023-07-26",
-    category: categories.task,
+    content: "Don't forget to call mom on 07-09-2023 and 12-09-2023.",
+    category: Categories.Task,
+    createdAt: "30.07.2023",
   },
   {
-    name:
-    text: "come up with a new project",
-    date: "2023-07-27",
-    category: categories.idea,
+    content: "Remember to buy groceries on 28-07-2023.",
+    category: Categories.Task,
+    createdAt: "30.07.2023",
   },
   {
-    name:
-    text: "Meeting with friend",
-    date: "2023-07-28",
-    category: categories.task,
+    content: "Had a great idea for a new project!",
+    category: Categories.Idea,
+    createdAt: "30.07.2023",
   },
   {
-    name:
-    text: "Learn JavaScript",
-    date: "2023-07-29",
-    category: categories.thought,
+    content:
+      "I'm going to have a dentist appointment on 30-07-2023, I moved it from 31-07-2023.",
+    category: Categories.Task,
+    createdAt: "30.07.2023",
   },
   {
-    name:
-    text: "Clean house",
-    date: "2023-07-30",
-    category: categories.task,
+    content: "This is just a random thought.",
+    category: Categories.Thought,
+    createdAt: "30.07.2023",
   },
   {
-    name:
-    text: "Be the change that you wish to see in the world.",
-    date: "2023-07-31",
-    category: categories.quote,
+    content: "Need to submit the project proposal by 02-08-2023.",
+    category: Categories.Task,
+    createdAt: "30.07.2023",
   },
   {
-    text: "Write article",
-    date: "2023-08-01",
-    category: categories.idea,
+    content: "Start learning a new programming language.",
+    category: Categories.Idea,
+    createdAt: "30.07.2023",
   },
 ];
