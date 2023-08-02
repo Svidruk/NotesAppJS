@@ -11,13 +11,15 @@
       <form class="form-container" id="addNoteForm">
         <input type="hidden" id="noteId" />
         <span class="close" id="closeButton">&times;</span>
-        <input type="text" id="noteContent" maxlength="90" placeholder="Type here" required />
+        <input class = "noteName" type="text" id="noteName" maxlength="30" placeholder="Note header" required />
+        <input class = "noteContent" type="text" id="noteContent" maxlength="90" placeholder="Type here" required />
         <select id="noteCategory" required>
           <option value="Task">Task</option>
           <option value="Thought">Thought</option>
           <option value="Idea">Idea</option>
         </select>
-        <button class="addNoteButton" type="submit">Add Note</button>
+        <button class="NoteButton" id="addNoteButton" type="submit">Add Note</button>
+        <button class="NoteButton" id="editNoteButton" type="submit" style="display: none;">Edit Note</button>
       </form>
     </div>
     <table>
@@ -25,6 +27,7 @@
         <tr>
           <th>Category</th>
           <th></th>
+          <th>Name</th>
           <th>Content</th>
           <th>Dates</th>
           <th>Created At</th>
@@ -42,6 +45,7 @@
         <tr>
           <th>Category</th>  
           <th></th>
+          <th>Name</th>
           <th>Content</th>
           <th>Dates</th>
           <th>Created At</th>
@@ -50,7 +54,7 @@
       </thead>
       <tbody id="archivedNotesTableBody"></tbody>
     </table>
-    <table class="archive">
+    <table>
       <thead>
         <tr>
           <th>Category</th>
