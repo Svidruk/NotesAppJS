@@ -116,8 +116,10 @@ export function initializeEventHandlers() {
     renderArchivedNotesDropdown();
   }
 
-  function removeArchiveNote(index) {
+  function removeNote(index) {
     notesData.splice(index, 1);
+    renderNotesTable();
+    renderSummaryTable();
     renderArchivedNotesDropdown();
   }
 
@@ -140,7 +142,7 @@ export function initializeEventHandlers() {
         } else if (action === "archive") {
           toggleArchiveNote(index);
         } else if (action === "remove") {
-          removeArchiveNote(index);
+            removeNote(index);
         }
       } catch (error) {
         console.error("Error performing action:", error);
