@@ -44,14 +44,18 @@ export function initializeEventHandlers() {
     noteCategorySelect.value = notesData[index].category;
   }
 
-  editNoteButton.addEventListener("click", editNoteInput);
-
   function addNoteInput(event) {
     event.preventDefault();
     const name = noteNameInput.value;
     const content = noteContentInput.value;
     const category = noteCategorySelect.value;
     const dates = extractDates(content);
+
+    if (!name || !content) {
+      alert("Please fill in all fields before adding the note.");
+      return;
+    }
+
     const newNote = {
       category,
       name,
@@ -70,8 +74,16 @@ export function initializeEventHandlers() {
   function editNoteInput(event) {
     event.preventDefault();
     let index = event.target.dataset.index;
+    const newName = noteNameInput.value;
     try {
-      console.log(index);
+      if (
+        !noteNameInput.value ||
+        !noteContentInput.value
+      ) {
+        alert("Please fill in all fields before adding the note.");
+        return;
+      }
+
       notesData[index].name = noteNameInput.value;
       notesData[index].content = noteContentInput.value;
       notesData[index].category = noteCategorySelect.value;
@@ -135,6 +147,8 @@ export function initializeEventHandlers() {
       }
     }
   });
+
+  editNoteButton.addEventListener("click", editNoteInput);
   showArchivedButton.addEventListener("click", showArchivedNotesDropdown);
   addNoteButton.addEventListener("click", addNoteInput);
 }
